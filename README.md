@@ -1,4 +1,3 @@
-**`PROJECT_SUMMARY.md`**
 # AI Weatherman – Sunny McSkies – Project Summary (Dec 2025)
 
 ## Goal
