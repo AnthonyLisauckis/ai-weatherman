@@ -1,6 +1,4 @@
 **`PROJECT_SUMMARY.md`**
-
-```markdown
 # AI Weatherman – Sunny McSkies – Project Summary (Dec 2025)
 
 ## Goal
@@ -38,15 +36,7 @@ ai-weatherman-repo/
 
 
 ## Automation
-Daily cron job (set to 6 AM **Central Time** with daylight saving support):
-```cron
-0 6 * * * TZ="America/Chicago" /home/tlisauckis/repos/ai-weatherman-repo/src/run_weather.sh >> /home/tlisauckis/repos/ai-weatherman-repo/cron.log 2>&1
-```
-or the simpler legacy form:
-```cron
-0 6 * * * /home/tlisauckis/repos/ai-weatherman-repo/src/run_weather.sh >> /home/tlisauckis/repos/ai-weatherman-repo/cron.log 2>&1
-```
-with the system timezone set to `America/Chicago`.
+Uses a Github Actions workflow to automate delivery of weather broadcast.
 
 ## Delivery Method: ntfy.sh
 - Zero cost, zero accounts
@@ -55,12 +45,9 @@ with the system timezone set to `America/Chicago`.
 
 ## Current Status
 - Fully working end-to-end
-- Runs daily at 6 AM Central Time
-- Delivers beautiful, witty forecast to phone via ntfy
+- Runs daily at 7 AM Central Time
+- Delivers forecast to phone via ntfy (subscribe to 'sunny-roundrock')
 - Zero ongoing cost
 - Ready for future expansion (multi-city, consumer location input, emojis, etc.)
 
 Sunny McSkies is officially live and waking up Central Texas every morning. ☀️
-
-Built with love in December 2025 by you and Grok.
-```
