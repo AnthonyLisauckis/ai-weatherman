@@ -2,6 +2,14 @@ from pathlib import Path
 import urllib.request
 import json
 
+PROJECT_ROOT = Path(__file__).parent.resolve()
+DATA_DIR = PROJECT_ROOT / 'data'
+DATA_DIR.mkdir(exist_ok=True)
+print(
+    f"Data directory: {DATA_DIR}"
+    )
+
+
 class OpenMeteoAPI:
     def __init__(self, location='RoundRock', days=7):
         self.lat = None
@@ -10,7 +18,7 @@ class OpenMeteoAPI:
         self.days = days
         self.daily_forecast = []
         self.hourly_forecast = []
-        self.output_dir = './data/'
+        self.output_dir = DATA_DIR
 
     def get_coordinates(self):
         # Step 1: Geocode to get lat/lon (supports city or postal code)
@@ -109,9 +117,9 @@ class OpenMeteoAPI:
             return None
         
     def write_forecast(self):
-        with open(Path(self.output_dir+'daily_forecast.json'), 'w') as f:
+        with open(Path(self.output_dir / 'daily_forecast.json'), 'w') as f:
             json.dump(self.daily_forecast, f, indent=4)
-        with open(Path(self.output_dir+'hourly_forecast.json'), 'w') as f:
+        with open(Path(self.output_dir / 'hourly_forecast.json'), 'w') as f:
             json.dump(self.hourly_forecast, f, indent=4)
 
 def main():
