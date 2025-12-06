@@ -23,7 +23,7 @@ Build a **100% free**, fully automated, personal daily weather forecast delivere
 - Cron (system scheduler)
 
 ## Repository Structure
-```
+
 ai-weatherman-repo/
 ├── src/
 │   ├── openmeteo.py       → fetches & saves daily/hourly JSON
@@ -35,7 +35,7 @@ ai-weatherman-repo/
 |       ├── openmeteo.log, weatherman.log
 |       └── cron.log               → execution log
 ├── .env                   → HF_TOKEN (and optional others)
-```
+
 
 ## Automation
 Daily cron job (set to 6 AM **Central Time** with daylight saving support):
