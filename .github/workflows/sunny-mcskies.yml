@@ -2,7 +2,7 @@ name: Sunny McSkies Daily Forecast
 
 on:
   schedule:
-    - cron: '10 13 * * *' 
+    - cron: '8 13 * * *' 
   workflow_dispatch:
 
 jobs:
