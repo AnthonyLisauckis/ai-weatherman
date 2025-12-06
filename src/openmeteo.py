@@ -10,7 +10,7 @@ class OpenMeteoAPI:
         self.days = days
         self.daily_forecast = []
         self.hourly_forecast = []
-        self.output_dir = './data/outputs/'
+        self.output_dir = './data/'
 
     def get_coordinates(self):
         # Step 1: Geocode to get lat/lon (supports city or postal code)

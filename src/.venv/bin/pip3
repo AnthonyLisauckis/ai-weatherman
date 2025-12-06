@@ -1,4 +1,4 @@
-#!/home/tlisauckis/repos/ai-weatherman/.venv/bin/python3
+#!/home/tlisauckis/repos/ai-weatherman-repo/src/.venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
